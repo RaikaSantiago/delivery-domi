@@ -1,0 +1,107 @@
+.container-img-landing-page {
+  position: relative;
+}
+
+.img-landing {
+  width: 100%;
+  height: 600px;
+  background: no-repeat center;
+  z-index: 0;
+  display: block;
+}
+
+.container-menu {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: white;
+}
+
+.form-section {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 40px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.container-login {
+  display: flex;
+  text-align: center;
+}
+
+.icon-margin {
+  margin-right: 5px;
+}
+
+.container-label-headers {
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+}
+
+// Menu lateral
+.offcanvas {
+  width: 400px;
+  /* Asegura que tenga un ancho visible */
+  background-color: #ffffff;
+  /* Color de fondo blanco para el contenido */
+  border-left: 1px solid #ddd;
+}
+
+.offcanvas-header {
+  background-color: #f8f9fa;
+  /* Fondo para el header */
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.offcanvas-body {
+  padding: 2rem;
+  color: #000;
+  /* Asegura que el texto sea visible */
+}
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close::before {
+  font-size: 1.5rem;
+  color: #000;
+}
