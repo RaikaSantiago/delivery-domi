@@ -2,40 +2,45 @@
   <div class="login-card animate__animated animate__fadeInDown">
     <div class="login-header">
       <img
-        src="assets/logo-delivery.png"
+        src="assets/images/domi-icon.png"
         alt="Logo de Domicilios"
         class="logo" />
       <h2>Iniciar Sesión</h2>
     </div>
-    <form formGroup="loginForm" (ngSubmit)="onSubmit()">
-      <div class="form-group mb-3">
-        <label for="email">Correo electrónico</label>
-        <input
-          type="email"
-          id="email"
-          class="form-control"
-          formControlName="email"
-          placeholder="Ingresa tu correo"
-          required />
-      </div>
-      <div class="form-group mb-3">
-        <label for="password">Contraseña</label>
-        <input
-          type="password"
-          id="password"
-          class="form-control"
-          formControlName="password"
-          placeholder="Ingresa tu contraseña"
-          required />
-      </div>
-      <button
-        type="submit"
-        class="btn btn-primary w-100 mb-3 animate__animated animate__pulse">
-        Iniciar sesión
-      </button>
-      <div class="text-center">
-        <a href="#" class="text-muted">¿Olvidaste tu contraseña?</a>
-      </div>
-    </form>
+    <div class="align-items-left">
+      <form
+        class="align-items-left"
+        formGroup="loginForm"
+        (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label class="align-items-left" for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Ingresa tu correo"
+            required />
+        </div>
+        <div class="form-group mb-3">
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Ingresa tu contraseña"
+            required />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100 mb-3 animate__animated animate__pulse">
+          Iniciar sesión
+        </button>
+        <div class="text-center">
+          <a href="#" class="text-muted">¿Olvidaste tu contraseña?</a>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

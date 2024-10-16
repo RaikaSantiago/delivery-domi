@@ -29,6 +29,10 @@
       </nav>
     </div> -->
     <nav class="navbar navbar-expand-md navbar-light">
+      <img
+        src="assets/images/domi-icon.png"
+        alt="Logo de Domicilios"
+        class="logo" />
       <h1><B>DOMISERVICIOS</B></h1>
       <div class="group d-flex align-items-center">
         <button
@@ -41,7 +45,13 @@
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a>
+        <button
+          class="login-icon d-sm-none btn btn-link p-0"
+          style="margin-left: 0.5rem"
+          (click)="goToLogin()"
+          type="button">
+          <i class="size-icon fa fa-user"></i>
+        </button>
       </div>
       <div
         class="collapse navbar-collapse justify-content-end"
@@ -66,7 +76,7 @@
       <div class="container-login d-none d-sm-flex">
         <button
           (click)="openLogin(loginOffcanvas)"
-          class="btn btn-outline-danger">
+          class="btn btn-outline-danger animate__animated animate__pulse">
           <i class="icon-margin fa fa-user" aria-hidden="true"></i
           ><b>Inicio Sesión</b>
         </button>
@@ -77,7 +87,11 @@
 <!-- Header End -->
 <!-- Hero Start -->
 <section class="container-img-landing-page">
-  <div class="form-section p-4 container-menu">
+  <div class="form-section p-4 container-menu" style="text-align: center">
+    <img
+      src="assets/images/domi-icon.png"
+      alt="Logo de Domicilios"
+      class="logo-form" />
     <h2 class="mb-4">Solicita tu Servicio</h2>
     <div class="mb-3">
       <input type="text" class="form-control" placeholder="Origen" />
@@ -95,11 +109,11 @@
       <input type="text" class="form-control" placeholder="Peso (kg)" />
     </div>
     <div class="d-flex justify-content-around mt-4">
-      <button class="btn btn-danger btn-lg">
+      <button class="btn btn-danger btn-lg animate__animated animate__pulse">
         <i class="icon-margin fa fa-calculator" aria-hidden="true"></i>Calcular
         Pedido
       </button>
-      <button class="btn btn-success btn-lg">
+      <button class="btn btn-success btn-lg animate__animated animate__pulse">
         <i class="icon-margin fa fa-check" aria-hidden="true"></i>Pedir
       </button>
     </div>

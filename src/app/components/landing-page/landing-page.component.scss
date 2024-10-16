@@ -105,3 +105,34 @@
   font-size: 1.5rem;
   color: #000;
 }
+
+.logo {
+  width: 40px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-form {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+// Changes button link
+.btn-link {
+  color: inherit; /* Mantiene el color del texto del padre */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  padding: 0; /* Sin padding */
+
+  &:hover,
+  &:focus {
+    text-decoration: none; /* Elimina el subrayado en hover y focus */
+    outline: none; /* Sin contorno en focus */
+    background-color: transparent; /* Mantiene fondo transparente */
+  }
+}
+
+.size-icon {
+  font-size: large;
+}
