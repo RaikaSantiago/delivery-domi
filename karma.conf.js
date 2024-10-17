@@ -19,9 +19,9 @@ module.exports = function (config) {
       clearContext: false,
     },
     coverageReporter: {
-      dir: path.join(__dirname, './coverage/my-app'),
+      dir: path.join(__dirname, './coverage'),
       subdir: '.',
-      reporters: [{ type: 'html' }, { type: 'text-summary' }],
+      reporters: [{ type: 'html' }, { type: 'lcovonly' }],
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

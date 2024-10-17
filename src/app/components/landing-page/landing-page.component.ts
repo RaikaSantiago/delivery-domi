@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from '../login/login.component';
+import { OffcanvasService } from '../../shared/services/offcanvas.service';
+import { WhatsappUtilComponent } from '../util/whatsapp-util/whatsapp-util.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [LoginComponent],
+  imports: [LoginComponent, WhatsappUtilComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
   constructor(
     private router: Router,
-    private offcanvasService: NgbOffcanvas,
+    private offcanvasServiceAux: OffcanvasService,
   ) {}
 
   goToLogin() {
     this.router.navigate(['/login']);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  openLogin(loginOffcanvas: any) {
-    this.offcanvasService.open(loginOffcanvas, { position: 'end' });
+  openLogin(loginOffcanvas: unknown) {
+    this.offcanvasServiceAux.open(loginOffcanvas);
   }
 }

@@ -91,8 +91,10 @@
     <img
       src="assets/images/domi-icon.png"
       alt="Logo de Domicilios"
-      class="logo-form" />
-    <h2 class="mb-4">Solicita tu Servicio</h2>
+      class="logo-form animate__animated animate__heartBeat animate__delay-2s" />
+    <h2 class="mb-4 animate__animated animate__heartBeat animate__delay-2s">
+      Solicita tu servicio
+    </h2>
     <div class="mb-3">
       <input type="text" class="form-control" placeholder="Origen" />
     </div>
@@ -216,12 +218,7 @@
     </div>
   </div>
 </section>
-<a
-  href="https://api.whatsapp.com/send?phone=3158773030"
-  class="btn-wsp"
-  target="_blank">
-  <i class="fa fa-whatsapp icono" aria-hidden="true"></i>
-</a>
+
 <!-- Footer Start -->
 <footer>
   <!-- Foot Note Start -->
@@ -238,10 +235,12 @@
   <!-- Foot Note End -->
 </footer>
 
+<!-- Setion Whatsapp -->
+<app-chat-whatsapp></app-chat-whatsapp>
 <!-- Offcanvas para el login -->
 <ng-template #loginOffcanvas let-offcanvas>
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Inicio de Sesión</h5>
+    <h5 class="offcanvas-title">Inicio de Sesión en DOMISERVICIOS</h5>
     <button
       type="button"
       class="btn-close"
