@@ -1,0 +1,41 @@
+/* Contenedor para el borde */
+.fixed-corner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 102px 102px 0 0;
+  /* Triángulo más grande para el borde */
+  border-color: white transparent transparent transparent;
+  /* Color del borde */
+  transform: rotate(-90deg);
+}
+
+/* Triángulo interior */
+.fixed-corner {
+  position: absolute;
+  bottom: 0px;
+  /* Separación de 1px */
+  left: 1px;
+  /* Separación de 1px */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 100px 0 0;
+  /* Triángulo interior */
+  border-color: #ff9800 transparent transparent transparent;
+  /* Color del triángulo principal */
+}
+
+.fixed-corner span {
+  cursor: pointer;
+  position: absolute;
+  top: -75px;
+  left: 0px;
+  transform: rotate(135deg);
+  /* Ajustar la rotación del texto */
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}

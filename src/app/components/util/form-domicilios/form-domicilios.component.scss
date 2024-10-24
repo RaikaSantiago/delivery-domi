@@ -1,0 +1,50 @@
+mat-form-field {
+  width: 100%;
+}
+
+.form-section {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.precio-label {
+  font-size: 24px;
+  /* Tamaño de fuente grande para destacar el precio */
+  font-weight: bold;
+  /* Negrita para resaltar el texto */
+  color: #ffffff;
+  /* Color del texto blanco */
+  // background-color: #ff5722; /* Fondo llamativo en tono naranja */
+  padding: 8px 12px;
+  /* Espaciado interno para que se vea como una etiqueta */
+  // border-radius: 8px; /* Bordes redondeados */
+  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
+  display: inline-block;
+  /* Para que la etiqueta respete el padding */
+}
+
+.container-menu {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: white;
+}
+
+.logo-form {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}

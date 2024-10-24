@@ -1,8 +1,14 @@
+.container-general {
+  display: flex;
+  flex-direction: column;
+}
+
 .container-img-landing-page {
   position: relative;
 }
 
 .img-landing {
+  margin-top: 64px;
   width: 100%;
   height: 700px;
   background: no-repeat center;
@@ -10,39 +16,9 @@
   display: block;
 }
 
-.container-menu {
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  color: white;
-}
-
-.form-section {
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.form-section h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
 .container-login {
   display: flex;
   text-align: center;
-}
-
-.icon-margin {
-  margin-right: 5px;
 }
 
 .container-label-headers {
@@ -54,9 +30,7 @@
 // Menu lateral
 .offcanvas {
   width: 400px;
-  /* Asegura que tenga un ancho visible */
   background-color: #ffffff;
-  /* Color de fondo blanco para el contenido */
   border-left: 1px solid #ddd;
 }
 
@@ -70,7 +44,6 @@
 .offcanvas-body {
   padding: 2rem;
   color: #000;
-  /* Asegura que el texto sea visible */
 }
 
 .btn-close {
@@ -93,42 +66,30 @@
   margin-bottom: 0.5rem;
 }
 
-.logo-form {
-  width: 60px;
-  margin-bottom: 0.5rem;
-}
-
 // Changes button link
 .btn-link {
-  color: inherit; /* Mantiene el color del texto del padre */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin borde */
-  padding: 0; /* Sin padding */
+  color: inherit;
+  /* Mantiene el color del texto del padre */
+  text-decoration: none;
+  /* Elimina el subrayado del enlace */
+  background-color: transparent;
+  /* Fondo transparente */
+  border: none;
+  /* Sin borde */
+  padding: 0;
+  /* Sin padding */
 
   &:hover,
   &:focus {
-    text-decoration: none; /* Elimina el subrayado en hover y focus */
-    outline: none; /* Sin contorno en focus */
-    background-color: transparent; /* Mantiene fondo transparente */
+    text-decoration: none;
+    /* Elimina el subrayado en hover y focus */
+    outline: none;
+    /* Sin contorno en focus */
+    background-color: transparent;
+    /* Mantiene fondo transparente */
   }
 }
 
 .size-icon {
   font-size: large;
-}
-
-.precio-label {
-  font-size: 24px; /* Tamaño de fuente grande para destacar el precio */
-  font-weight: bold; /* Negrita para resaltar el texto */
-  color: #ffffff; /* Color del texto blanco */
-  // background-color: #ff5722; /* Fondo llamativo en tono naranja */
-  padding: 8px 12px; /* Espaciado interno para que se vea como una etiqueta */
-  // border-radius: 8px; /* Bordes redondeados */
-  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto flotante */
-  display: inline-block; /* Para que la etiqueta respete el padding */
-}
-
-mat-form-field {
-  width: 100%;
 }

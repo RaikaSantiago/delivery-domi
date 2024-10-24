@@ -1,1 +1,83 @@
-<p>form-domicilios works!</p>
+<div class="form-section p-4 container-menu" style="text-align: center">
+  <img
+    [src]="img_icon_logo"
+    alt="Logo de Domicilios"
+    class="logo-form animate__animated animate__heartBeat animate__delay-2s" />
+  <h2 class="mb-4 animate__animated animate__heartBeat animate__delay-2s">
+    Solicita tu domicilio
+  </h2>
+  <form [formGroup]="formDomi" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label
+          ><i class="fa fa-map-marker" aria-hidden="true"></i> Origen</mat-label
+        >
+        <mat-error *ngIf="validOrigenField">
+          La opción no es válida para el barrio de Origen.
+        </mat-error>
+        <input
+          type="text"
+          matInput
+          formControlName="barrioOrigen"
+          [matAutocomplete]="auto1" />
+        <mat-autocomplete #auto1="matAutocomplete">
+          <mat-option
+            *ngFor="let option of filteredBarriosOrigen | async"
+            [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label
+          ><i class="fa fa-map-marker" aria-hidden="true"></i>
+          Destino</mat-label
+        >
+        <mat-error *ngIf="validDestinoField">
+          La opción no es válida para el barrio de Destino.
+        </mat-error>
+        <input
+          type="text"
+          matInput
+          formControlName="barrioDestino"
+          [matAutocomplete]="auto2" />
+        <mat-autocomplete #auto2="matAutocomplete">
+          <mat-option
+            *ngFor="let option of filteredBarriosDestino | async"
+            [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div class="mb-3">
+      <textarea
+        placeholder="Descripción del Domicilio 📦"
+        name="package"
+        id="package1"
+        style="width: 100%; border-radius: 5px; font-size: medium"
+        rows="2"></textarea>
+    </div>
+    <div *ngIf="isPrice">
+      <h2 class="precio-label">
+        <i class="fa fa-usd" aria-hidden="true"></i> {{ valor }}
+      </h2>
+    </div>
+    <div class="d-flex justify-content-around mt-4">
+      <button
+        type="submit"
+        [disabled]="formDomi.invalid"
+        class="btn btn-danger btn-lg animate__animated animate__pulse">
+        <i class="icon-margin fa fa-calculator" aria-hidden="true"></i>Calcular
+        Domi 📦
+      </button>
+      <button
+        (click)="placeOrder()"
+        class="btn btn-success btn-lg animate__animated animate__pulse">
+        <i class="icon-margin fa fa-check" aria-hidden="true"></i>Pedir Domi 🚀
+      </button>
+    </div>
+  </form>
+</div>

@@ -171,7 +171,6 @@ form button.btn-primary:hover {
 }
 
 .hero .container {
-  position: relative;
   z-index: 5;
 }
 
@@ -320,10 +319,11 @@ form button.btn-primary:hover {
 }
 
 .title h1 {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .title .title-blue {
+  font-size: 40px;
   color: #26264b;
 }
 

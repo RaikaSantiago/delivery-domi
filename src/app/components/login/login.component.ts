@@ -11,6 +11,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OffcanvasService } from '../../shared/services/offcanvas.service';
+import { Constants } from '../../shared/constants/url-constants';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ import { OffcanvasService } from '../../shared/services/offcanvas.service';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
+  public img_icon_logo: string = Constants.IMG_ICON_LOGO;
   public loginForm: FormGroup;
   private emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   public submitted: boolean = false;
@@ -71,6 +73,6 @@ export class LoginComponent {
 
   goToDashboard() {
     this.offcanvasService.dismiss();
-    this.router.navigate(['/dashboard']);
+    // this.router.navigate(['/dashboard']);
   }
 }
