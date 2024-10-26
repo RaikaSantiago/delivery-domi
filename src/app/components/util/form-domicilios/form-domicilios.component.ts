@@ -34,6 +34,7 @@ export class FormDomiciliosComponent implements OnInit {
   public valor: string = '4.000';
   public isPrice: boolean = false;
   public formDomi!: FormGroup;
+  public isValidRequest: boolean = true;
   options: string[] = [
     'Barrio 1',
     'Barrio 2',
@@ -91,6 +92,7 @@ export class FormDomiciliosComponent implements OnInit {
 
   private calculatePrice() {
     this.isPrice = true;
+    this.isValidRequest = false;
     Swal.fire({
       html: '<div style="text-align: center;"><img src="assets/images/domi-icon.png" alt="GIF" style="width: 50px; height: auto;"></div>',
       title: 'Costo del domicilio: $ ' + this.valor,

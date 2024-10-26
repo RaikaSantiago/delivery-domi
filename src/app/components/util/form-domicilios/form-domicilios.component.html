@@ -65,19 +65,25 @@
         <i class="fa fa-usd" aria-hidden="true"></i> {{ valor }}
       </h2>
     </div>
-    <div class="d-flex justify-content-around mt-4">
-      <button
-        type="submit"
-        [disabled]="formDomi.invalid"
-        class="btn btn-danger btn-lg animate__animated animate__pulse">
-        <i class="icon-margin fa fa-calculator" aria-hidden="true"></i>Calcular
-        Domi 📦
-      </button>
-      <button
-        (click)="placeOrder()"
-        class="btn btn-success btn-lg animate__animated animate__pulse">
-        <i class="icon-margin fa fa-check" aria-hidden="true"></i>Pedir Domi 🚀
-      </button>
+    <div class="d-flex justify-content-around mt-4 row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+        <button
+          type="submit"
+          [disabled]="formDomi.invalid"
+          class="btn btn-danger btn-lg animate__animated animate__pulse">
+          <i class="icon-margin fa fa-calculator" aria-hidden="true"></i
+          >Calcular Domi 📦
+        </button>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+        <button
+          (click)="placeOrder()"
+          [disabled]="isValidRequest"
+          class="btn btn-success btn-lg animate__animated animate__pulse">
+          <i class="icon-margin fa fa-check" aria-hidden="true"></i>Pedir Domi
+          🚀
+        </button>
+      </div>
     </div>
   </form>
 </div>
